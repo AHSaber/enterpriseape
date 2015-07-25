@@ -1,10 +1,22 @@
 Rails.application.routes.draw do
-  resources :invoices
+  get 'welcome/index'
+
+  get 'welcome/about'
+
+  get 'welcome/contact'
+
+  get 'welcome/features'
+
+  get 'welcome/faq'
+
+  get 'welcome/pricing'
+
+  resources :invoices, path: ''
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
   # You can have the root of your site routed with "root"
-  root 'invoice#index'
+  root to: 'invoice#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
